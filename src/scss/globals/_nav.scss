@@ -1,0 +1,47 @@
+.ak-nav__wrapper {
+    counter-reset: nav-item-counter;
+    display: flex;
+    float: right;
+    justify-content: space-between;
+    list-style: none;
+    padding-left: 0;
+    width: 70%;
+
+    li {
+        color: $accent-color;
+        display: inline-block;
+        flex: 0 1 auto;
+        overflow-x: hidden;
+        padding: 1em 2em;
+        position: relative;
+        text-align: center;
+
+        a {
+            color: inherit;
+        }
+
+        &::before {
+            content: counter(nav-item-counter, decimal-leading-zero);
+            counter-increment: nav-item-counter;
+            display: block;
+        }
+      
+        &::after {
+            background: currentcolor;
+            bottom: 0;
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            transform: translateX(-101%);
+            transition: transform 500ms ease-in;
+            width: 100%;
+        }
+      
+        &::hover {
+            &::after {
+                transform: translateX(0%);
+            }
+        }
+    }
+}
