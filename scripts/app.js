@@ -12,7 +12,7 @@
     }var i = typeof require == "function" && require;for (var o = 0; o < r.length; o++) {
         s(r[o]);
     }return s;
-})({ "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/app.js": [function (require, module, exports) {
+})({ "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/app.js": [function (require, module, exports) {
         'use strict';
 
         console.log('hello');
@@ -68,4 +68,4 @@
         }
 
         ak_MENU_BTN.addEventListener('click', ak_openNav);
-    }, {}] }, {}, ["/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/app.js"]);
+    }, {}] }, {}, ["/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/app.js"]);

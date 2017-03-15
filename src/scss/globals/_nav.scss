@@ -1,3 +1,5 @@
+$height-transition: min-height 300ms ease-in;
+
 .ak-nav {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -54,14 +56,18 @@
 .mobile-nav-frame {
     background-color: $background-color;
     width: 100%!important;
-    height: 0!important;
+    height: 0%!important;
+    min-height: 0%;
     right: 0!important;
+    transition: $height-transition;
+    display: block!important;
 
     .mobile-nav-icon {
         display: none;
     }
 
     &.ak_mobile_nav--open {
-        height: 100%!important;
+        min-height: 100%!important;
+        transition: $height-transition;
     }
 }
