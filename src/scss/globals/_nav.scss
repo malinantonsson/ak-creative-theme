@@ -1,5 +1,5 @@
 $height-transition: min-height 300ms ease-in;
-
+$mobile-landscape: 567px;
 .ak-nav {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -53,13 +53,60 @@ $height-transition: min-height 300ms ease-in;
     }
 }
 
+//clean this up to only use what's needed
+.mobile-nav-frame .mobile {
+    counter-reset: nav-item-counter;
+    li {
+        //color: $accent-color;
+        display: block;
+        /* flex: 0 1 auto; */
+        overflow-x: hidden;
+        padding: 1em 1em;
+        position: relative;
+        text-align: center;
+        font-size: 1rem!important;
+
+        @media (min-width: $mobile-landscape) {
+            display: inline-block;
+        }
+
+        //add the number above
+        a::before {
+            content: counter(nav-item-counter, decimal-leading-zero);
+            counter-increment: nav-item-counter;
+            display: block;
+        }
+      
+        //add the line below
+        a::after {
+            background: currentcolor;
+            bottom: 0;
+            content: '';
+            height: 1px;
+            left: 0;
+            position: absolute;
+            transform: translateX(-101%);
+            transition: transform 500ms ease-in;
+            width: 100%;
+        }
+      
+        //animate the line on hover
+        a:hover {
+            &::after {
+                transform: translateX(0%);
+            }
+        }
+    }
+}
+
 .mobile-nav-frame {
+    //lots of overrides
     .title {
         border: none!important;
     }
 
     h3 {
-        text-shadow: none!important;
+        display: none;
     }
     
     ul {
@@ -75,7 +122,6 @@ $height-transition: min-height 300ms ease-in;
         }
     }
 
-    background-color: $background-color;
     width: 100%!important;
     height: 0%!important;
     min-height: 0%;
@@ -83,12 +129,35 @@ $height-transition: min-height 300ms ease-in;
     transition: $height-transition;
     display: block!important;
 
+    //transition the height to on menu open
+    &.ak_mobile_nav--open {
+        min-height: 100%!important;
+        transition: $height-transition;
+    }
+
+    //vertically center the nav
+    .slides-container {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+    }
+
+    //center mobile nav on landscape
+    .slide {
+        text-align: center;
+    }
+
+ 
     .mobile-nav-icon {
         display: none;
     }
 
-    &.ak_mobile_nav--open {
-        min-height: 100%!important;
-        transition: $height-transition;
+    
+    //override
+    .mobile {
+        margin-left: 0;
+        margin-right: 0;
+        display: inline-block;
     }
 }
