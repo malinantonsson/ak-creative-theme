@@ -11,7 +11,7 @@
   },
   "author": "Malin Antonsson",
   "license": "ISC",
-  "sasslintConfig" : "sass-lint.yml",
+  "sasslintConfig": "sass-lint.yml",
   "dependencies": {
     "gulp": "^3.9.1"
   },
@@ -23,6 +23,7 @@
     "eslint": "^1.5.1",
     "gulp": "^3.8.10",
     "gulp-autoprefixer": "^3.0.2",
+    "gulp-babel": "^6.1.2",
     "gulp-eslint": "^1.0.0",
     "gulp-minify-css": "^1.1.6",
     "gulp-modernizr": "^1.0.0-alpha",

@@ -53,4 +53,15 @@
 
 .mobile-nav-frame {
     background-color: $background-color;
+    width: 100%!important;
+    height: 0!important;
+    right: 0!important;
+
+    .mobile-nav-icon {
+        display: none;
+    }
+
+    &.ak_mobile_nav--open {
+        height: 100%!important;
+    }
 }
