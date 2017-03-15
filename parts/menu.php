@@ -38,7 +38,7 @@ $logo_in_menu = siteorigin_setting( 'layout_masthead' ) == 'logo-in-menu';
         <?php if( $ubermenu_active ): ?>
             <?php ubermenu( 'main' , array( 'theme_location' => 'primary' ) ); ?>
         <?php else: ?>
-            <?php wp_nav_menu( array( 'theme_location' => 'primary' ) ); ?>
+            <?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'ak-nav__wrapper', 'container_class' => 'ak-nav') ); ?>
         <?php endif; ?>
     </div>
 </nav><!-- .site-navigation .main-navigation -->
