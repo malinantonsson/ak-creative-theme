@@ -54,6 +54,27 @@ $height-transition: min-height 300ms ease-in;
 }
 
 .mobile-nav-frame {
+    .title {
+        border: none!important;
+    }
+
+    h3 {
+        text-shadow: none!important;
+    }
+    
+    ul {
+        border: none!important;
+        box-shadow: none!important;
+
+        li {
+            border: none!important;
+
+            a.link {
+                text-shadow: none!important;
+            }
+        }
+    }
+
     background-color: $background-color;
     width: 100%!important;
     height: 0%!important;
