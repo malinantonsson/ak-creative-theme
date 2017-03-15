@@ -1,5 +1,6 @@
 $height-transition: min-height 300ms ease-in;
 $mobile-landscape: 567px;
+$min-tablet: 767px;
 .ak-nav {
     padding-top: 10px;
     padding-bottom: 10px;
@@ -7,49 +8,54 @@ $mobile-landscape: 567px;
 }
 
 .ak-nav__wrapper {
-    counter-reset: nav-item-counter;
-    display: flex;
-    float: right;
-    justify-content: space-between;
-    list-style: none;
-    padding-left: 0;
-    width: 70%;
+    @media (min-width: $min-tablet) {
+        counter-reset: nav-item-counter;
+        display: flex;
+        float: right;
+        justify-content: space-between;
+        list-style: none;
+        padding-left: 0;
+        width: 70%;
 
-    li {
-        //color: $accent-color;
-        display: inline-block;
-        flex: 0 1 auto;
-        overflow-x: hidden;
-        padding: 1em 2em;
-        position: relative;
-        text-align: center;
+    
 
-        //add the number above
-        a::before {
-            content: counter(nav-item-counter, decimal-leading-zero);
-            counter-increment: nav-item-counter;
-            display: block;
-        }
-      
-        //add the line below
-        a::after {
-            background: currentcolor;
-            bottom: 0;
-            content: '';
-            height: 1px;
-            left: 0;
-            position: absolute;
-            transform: translateX(-101%);
-            transition: transform 500ms ease-in;
-            width: 100%;
-        }
-      
-        //animate the line on hover
-        a:hover {
-            &::after {
-                transform: translateX(0%);
+        li {
+            //color: $accent-color;
+            display: inline-block;
+            flex: 0 1 auto;
+            overflow-x: hidden;
+            padding: 1em 2em;
+            position: relative;
+            text-align: center;
+
+            //add the number above
+            a::before {
+                content: counter(nav-item-counter, decimal-leading-zero);
+                counter-increment: nav-item-counter;
+                display: block;
+            }
+          
+            //add the line below
+            a::after {
+                background: currentcolor;
+                bottom: 0;
+                content: '';
+                height: 1px;
+                left: 0;
+                position: absolute;
+                transform: translateX(-101%);
+                transition: transform 500ms ease-in;
+                width: 100%;
+            }
+          
+            //animate the line on hover
+            a:hover {
+                &::after {
+                    transform: translateX(0%);
+                }
             }
         }
+
     }
 }
 
