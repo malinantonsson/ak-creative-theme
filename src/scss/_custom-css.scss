@@ -1,0 +1,21 @@
+//THESE SHOULD BE ADDED TO CMS
+
+.ak-nav__wrapper li a::after {
+    background: #ffc72a; 
+}
+
+#scroll-to-top {
+  color: #000000;
+}
+
+#scroll-to-top:hover {
+  color: #000000;
+}
+
+.scroll-to-top__copy {
+  color: #ffc72a;
+}
+
+.entry-title::before {
+  content: '— ';
+}

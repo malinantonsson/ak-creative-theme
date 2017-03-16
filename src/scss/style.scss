@@ -14,8 +14,11 @@ Version: 0.1
 // tablet < 959px
 @import 'base';
 
-
 @import 'globals/nav';
 @import 'globals/footer';
 
+@import 'components/entry-title';
 @import 'components/scroll-to-top';
+
+
+@import 'custom-css';
