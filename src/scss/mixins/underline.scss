@@ -1,0 +1,8 @@
+@mixin underline() {
+    bottom: 0;
+    content: '';
+    height: 1px;
+    left: 0;
+    position: absolute;
+    width: 100%;
+}

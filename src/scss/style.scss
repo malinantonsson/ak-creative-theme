@@ -7,10 +7,12 @@ Author URI: http: //malinantonsson.com
 Template: vantage
 Version: 0.1
 */
-
+@import 'mixins/counter';
+@import 'mixins/underline';
 
 //mobile < 767px
 // tablet < 959px
 @import 'base';
+
 
 @import 'globals/nav';

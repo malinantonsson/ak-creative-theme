@@ -1,0 +1,10 @@
+@mixin counter-reset($counter) {
+    counter-reset: $counter;
+}
+
+@mixin counter($counter) {
+    content: counter($counter, decimal-leading-zero)'.';
+    counter-increment: $counter;
+    display: block;
+    font-size: 0.8em;
+}
