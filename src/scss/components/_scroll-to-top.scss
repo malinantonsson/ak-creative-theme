@@ -1,0 +1,17 @@
+#scroll-to-top {
+    display: block;
+    position: static;
+    width: 50px;
+    margin: auto;
+    background-color: $background-color;
+    transform: scale(1, 1);
+    
+    //overrides
+    &.displayed {
+        opacity: 1!important;
+
+        &:hover {
+            opacity: 1!important;
+        }
+    }
+}
