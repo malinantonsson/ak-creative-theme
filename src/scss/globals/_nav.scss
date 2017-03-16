@@ -2,8 +2,8 @@ $height-transition: min-height 300ms ease-in;
 $mobile-landscape: 567px;
 $min-tablet: 767px;
 .ak-nav {
-    padding-top: 10px;
-    padding-bottom: 10px;
+    /* padding-top: 10px;
+    padding-bottom: 10px; */
     overflow: auto;
 }
 
@@ -22,22 +22,25 @@ $min-tablet: 767px;
         li {
             //color: $accent-color;
             display: inline-block;
-            flex: 0 1 auto;
+            flex: 1 1 auto;
             overflow-x: hidden;
-            padding: 1em 2em;
             position: relative;
             text-align: center;
 
+            a {//override
+                padding: 1em 0!important;
+            }
+
             //add the number above
             a::before {
-                content: counter(nav-item-counter, decimal-leading-zero);
+                content: counter(nav-item-counter, decimal-leading-zero)'.';
                 counter-increment: nav-item-counter;
                 display: block;
+                font-size: 0.8em;
             }
           
             //add the line below
             a::after {
-                background: currentcolor;
                 bottom: 0;
                 content: '';
                 height: 1px;
@@ -165,5 +168,19 @@ $min-tablet: 767px;
         margin-left: 0;
         margin-right: 0;
         display: inline-block;
+    }
+}
+
+//set line for current item
+.ak-nav__wrapper .current_page_item {
+    //add the line below
+    a::after {
+        bottom: 0;
+        content: '';
+        height: 1px;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        transform: translateX(0);
     }
 }
