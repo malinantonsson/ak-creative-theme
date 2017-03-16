@@ -1,5 +1,5 @@
-@mixin underline() {
-    bottom: 0;
+@mixin underline($position: 0) {
+    bottom: $position;
     content: '';
     height: 1px;
     left: 0;

@@ -1,6 +1,8 @@
 $height-transition: min-height 300ms ease-in;
 $mobile-landscape: 567px;
 $min-tablet: 767px;
+$min-desktop: 958px;
+
 .ak-nav {
     /* padding-top: 10px;
     padding-bottom: 10px; */
@@ -9,7 +11,7 @@ $min-tablet: 767px;
 
 .ak-nav__wrapper {
     //this is the main nav on desktop
-    @media (min-width: $min-tablet) {
+    @media (min-width: $min-desktop) {
         @include counter-reset(nav-item-counter);
         display: flex;
         float: right;
@@ -64,7 +66,7 @@ $min-tablet: 767px;
         text-align: center;
         font-size: 1rem!important;
 
-        @media (min-width: $mobile-landscape) {
+        @media (orientation:landscape) {
             display: inline-block;
         }
 
@@ -104,6 +106,7 @@ $min-tablet: 767px;
     ul {
         border: none!important;
         box-shadow: none!important;
+        border-radius: 0;
 
         li {
             border: none!important;
@@ -145,18 +148,26 @@ $min-tablet: 767px;
     .slide {
         text-align: center;
     }
-
- 
-    .mobile-nav-icon {
-        display: none;
-    }
-
     
     //override
     .mobile {
         margin-left: 0;
         margin-right: 0;
         display: inline-block;
+        position: relative;
+
+        //add the lines above and below the mobile & tablet portrait menu
+        @media (max-width: $min-desktop) and (orientation: portrait) {
+            &::before {
+                @include underline(100%);
+                background-color: black;
+            }
+
+            &::after {
+                @include underline();
+                background-color: black;
+            }
+        }
     }
 }
 
@@ -166,5 +177,35 @@ $min-tablet: 767px;
     a::after {
         @include underline();
         transform: translateX(0);
+    }
+}
+
+//align items logo & menu button on mobil & tablet
+.mobile-navigation .full-container {
+    @media (max-width: $min-desktop) {
+        overflow: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+//menu icon margin
+[menu-mobilenav-container] {
+    .main-navigation & ul {
+        margin-right: 10px;
+    }
+}
+
+//hide the default menu icon
+.mobile-nav-icon {
+    display: none;
+}
+
+
+//override padding on logo 
+@media (max-width: 1080px) {
+    body.responsive #masthead.masthead-logo-in-menu .logo {
+        margin-left: 10px;
     }
 }
