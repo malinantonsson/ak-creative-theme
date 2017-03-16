@@ -6,7 +6,11 @@ $min-desktop: 958px;
 .ak-nav {
     /* padding-top: 10px;
     padding-bottom: 10px; */
-    overflow: auto;
+    @media (min-width: $min-desktop) {
+        width: 70%;
+        float: right;
+        overflow: auto;
+    }
 }
 
 @media (min-width: $min-desktop) {
@@ -19,11 +23,9 @@ $min-desktop: 958px;
     @media (min-width: $min-desktop) {
         @include counter-reset(nav-item-counter);
         display: flex;
-        float: right;
         justify-content: space-between;
         list-style: none;
         padding-left: 0;
-        width: 70%;
 
         li {
             display: inline-block;
