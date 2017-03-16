@@ -1,0 +1,22 @@
+.site-footer {
+
+    //hide "a siteorigin theme"
+    #theme-attribution {
+        display: none;
+    }
+
+    #footer-widgets {
+        .widget {
+            margin-bottom: 1em;
+            .widget-title {
+                text-align: center;
+                margin-bottom: 0.3em;
+            }
+
+            //mobile override
+            @media screen and (max-width: 640px) {
+                padding-bottom: 0!important;
+            }
+        }
+    }
+}
