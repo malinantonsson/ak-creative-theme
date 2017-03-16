@@ -1,0 +1,13 @@
+.page-divider-vertical {
+    position: relative;
+
+    &::before {
+        height: 100%;
+        width: 1px;
+        content: '';
+        display: block;
+        position: absolute;
+        left: -20px;
+        border-left: 2px dashed;
+    }
+}

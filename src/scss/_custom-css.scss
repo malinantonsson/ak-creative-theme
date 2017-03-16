@@ -19,3 +19,10 @@
 .entry-title::before {
   content: '— ';
 }
+
+.page-number {
+    font-size: 76px;
+    margin-top: 36px; // same as content h1
+    font-family: "Crimson Text";
+    color: #ffc72a;
+}

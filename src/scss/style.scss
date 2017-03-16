@@ -17,8 +17,11 @@ Version: 0.1
 @import 'globals/nav';
 @import 'globals/footer';
 
+@import 'components/entry-content';
 @import 'components/entry-title';
+@import 'components/page-divider-vertical';
+@import 'components/page-number';
+@import 'components/scroll-to-section';
 @import 'components/scroll-to-top';
-
 
 @import 'custom-css';
