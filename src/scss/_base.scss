@@ -1,3 +1,14 @@
 $background-color: #ffffff;
 $copy-color: #000000;
 $accent-color: #ffc72a;
+
+
+// sets the max site width
+body.responsive.layout-full #page-wrapper .full-container {
+    max-width: 940px;
+}
+
+//set body content margin
+#main {
+    padding: 10px;
+}
