@@ -21,9 +21,11 @@
 
         var _modulesScrollToTop = require('./modules/scroll-to-top');
 
+        var $ = window.jQuery;
+
         (0, _modulesMobileNav.mobileNav)();
         (0, _modulesScrollToTop.scrollToTop)();
-        (0, _modulesScrollToSection.scrollToSection)();
+        (0, _modulesScrollToSection.scrollToSection)($);
     }, { "./modules/mobile-nav": "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js", "./modules/scroll-to-section": "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js", "./modules/scroll-to-top": "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-top.js" }], "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js": [function (require, module, exports) {
         'use strict';
 
@@ -91,68 +93,31 @@
         Object.defineProperty(exports, '__esModule', {
             value: true
         });
-        function scrollToSection() {
+        function scrollToSection($) {
+            var buttons = Array.from(document.querySelectorAll('[data-behaviour="scrollToSection"]'));
+            if (buttons.lenght < 1) return;
 
-            function getPageScroll() {
-                var yScroll;
-                if (window.pageYOffset) {
-                    yScroll = window.pageYOffset;
-                } else if (document.documentElement && document.documentElement.scrollTop) {
-                    yScroll = document.documentElement.scrollTop;
-                } else if (document.body) {
-                    yScroll = document.body.scrollTop;
+            function getFragmentTarget(id) {
+                if (id.slice(0, 1) === '#') {
+                    id = id.slice(1);
                 }
-                return yScroll;
+
+                return document.getElementById(id);
             }
 
-            /*button.addEventListener('click', function(event) {
-              targetOffset = document.getElementById(event.target.hash.substr(1)).offsetTop;
-               currentPosition = getPageScroll();
-               body.classList.add('in-transition');
-               body.style.WebkitTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-              body.style.MozTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-              body.style.transform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-              
-              window.setTimeout(function() {
-                body.classList.remove('in-transition');
-                body.style.cssText = "";
-                window.scrollTo(0, targetOffset);
-              }, animateTime);
-              
-              event.preventDefault();
-            }, false);*/
+            buttons.forEach(function (btn, i) {
+                btn.addEventListener('click', function (evt) {
+                    var target = getFragmentTarget(this.hash);
+                    if (!target) return;
 
-            var body = document.body;
-            var animateTime = 900;
+                    evt.preventDefault();
 
-            var targetOffset = undefined;
-
-            var buttons = document.querySelectorAll('[data-behaviour="scrollToSection"]');
-            if (buttons) {
-                buttons = Array.from(buttons);
-                buttons.forEach(function (button, index) {
-
-                    button.addEventListener('click', function (evt) {
-                        targetOffset = document.getElementById(evt.target.hash.substr(1)).offsetTop;
-                        var currentPosition = getPageScroll();
-
-                        body.classList.add('in-transition');
-                        body.style.WebkitTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-                        body.style.MozTransform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-                        body.style.transform = "translate(0, -" + (targetOffset - currentPosition) + "px)";
-
-                        window.setTimeout(function () {
-                            body.classList.remove('in-transition');
-                            body.style.cssText = "";
-                            window.scrollTo(0, targetOffset);
-                        }, animateTime);
-
-                        evt.preventDefault();
+                    $('html, body').animate({ scrollTop: $(target).offset().top }, 1000, function () {
+                        //update browser location
+                        window.location.hash = target.id;
                     });
                 });
-            }
-
-            //button = document.getElementById('scrollButton')
+            });
         };
 
         exports.scrollToSection = scrollToSection;

@@ -9,7 +9,7 @@ function enqueue_parent_styles() {
 }
 
 function theme_js() {
-    wp_enqueue_script( 'theme_js', get_stylesheet_directory_uri() . '/scripts/app.js', array(), '1.0', true );
+    wp_enqueue_script( 'theme_js', get_stylesheet_directory_uri() . '/scripts/app.js', array('jquery'), '1.0', true );
 }
 
 add_action('wp_enqueue_scripts', 'theme_js');

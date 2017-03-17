@@ -16,9 +16,3 @@ body.responsive.layout-full #page-wrapper .full-container {
 #main {
     padding: 0 10px;
 }
-
-body {
-    &.in-transition {
-    transition: transform 900ms ease;
-  }
-}
