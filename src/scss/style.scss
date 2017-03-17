@@ -14,12 +14,16 @@ Version: 0.1
 // tablet < 959px
 @import 'base';
 
-@import 'globals/nav';
+@import 'globals/cms-util';
 @import 'globals/footer';
+@import 'globals/headline';
+@import 'globals/nav';
 
 @import 'components/entry-content';
 @import 'components/entry-title';
+@import 'components/panel-row-style';
 @import 'components/page-divider-vertical';
+@import 'components/page-intro';
 @import 'components/page-number';
 @import 'components/scroll-to-section';
 @import 'components/scroll-to-top';

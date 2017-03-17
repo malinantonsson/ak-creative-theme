@@ -1,5 +1,21 @@
 .scroll-to-section {
-    &__button {
-        
+    br {
+        display: none;
+    }
+
+    &__button { 
+        font-family: "Crimson Text";
+    }
+
+    &__icon {
+        height: 20px;
+        width: 30px;
+        display: block;
+        margin: auto;
+        background: url('./svg/scroll-down.svg') top center no-repeat;
+    }
+
+    &__bracket {
+        color: #000;
     }
 }
