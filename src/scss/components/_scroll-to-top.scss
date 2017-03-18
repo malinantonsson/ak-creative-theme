@@ -20,7 +20,11 @@
     }
 
     .scroll-to-top__icon {
+        height: 20px;
+        width: 30px;
         display: block;
+        margin: auto;
+        background: url(./svg/scroll-top.svg) top center no-repeat;
     }
 }
 
