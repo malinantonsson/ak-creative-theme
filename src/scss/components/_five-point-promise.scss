@@ -7,5 +7,29 @@
 			float: right;
 		}
 	}
-	
+}
+
+.five-point-promise--first {
+	@media (max-width: $min-tablet) {
+		.panel-grid-cell:first-child {
+			.textwidget {
+				padding-top: 2em;
+				border-top: 2px dotted $copy-color;
+			}
+		}
+	}
+
+	@media (min-width: $min-tablet) {
+		//give the owl equal padding
+		.panel-grid-cell:first-child {
+			padding-top: 2em;
+		}
+		//add dotted border on the text
+		.panel-grid-cell:last-child {
+			.textwidget {
+				border-top: 2px dotted $copy-color;
+				padding-top: 2em;	
+			}
+		}
+	}
 }
