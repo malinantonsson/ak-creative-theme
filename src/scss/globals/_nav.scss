@@ -13,6 +13,7 @@ $height-transition: min-height 300ms ease-in;
 @media (min-width: $min-desktop) {
     .main-navigation {
         border-bottom: 1px dotted lightgray;
+        margin-top: 1rem;
     }
 }
 .ak-nav__wrapper {
@@ -23,6 +24,7 @@ $height-transition: min-height 300ms ease-in;
         justify-content: space-between;
         list-style: none;
         padding-left: 0;
+        margin-top: 2rem!important;
 
         li {
             display: inline-block;
@@ -164,7 +166,7 @@ $height-transition: min-height 300ms ease-in;
         @media (max-width: $min-desktop) and (orientation: portrait) {
             &::before {
                 @include underline(100%);
-                background-color: black;
+                background: url('./svg/bracket-left.svg') top center no-repeat;
             }
 
             &::after {
@@ -190,15 +192,15 @@ $height-transition: min-height 300ms ease-in;
         overflow: auto;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-end;
+        padding-top: 10px;
     }
 }
 
-//menu icon margin
-[menu-mobilenav-container] {
-    .main-navigation & ul {
-        margin-right: 10px;
-    }
+//menu icon sizing
+.mobilenav-main-link img {
+    max-width: 40px;
+    max-height: 25px;
 }
 
 //hide the default menu icon
@@ -210,6 +212,21 @@ $height-transition: min-height 300ms ease-in;
 //override padding on logo 
 @media (max-width: 1080px) {
     body.responsive #masthead.masthead-logo-in-menu .logo {
+        display: none;
+    }
+}
+
+.custom-logo-link {
+    display: inline-block;
+    float: left;
+    //override padding on logo 
+    @media (max-width: 1080px) {
         margin-left: 10px;
+        max-width: 20%;
+
+        .custom-logo {
+            max-width: 100%!important;
+            height: auto!important;
+        }
     }
 }

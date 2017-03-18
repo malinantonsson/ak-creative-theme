@@ -12,7 +12,7 @@
     }var i = typeof require == "function" && require;for (var o = 0; o < r.length; o++) {
         s(r[o]);
     }return s;
-})({ "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/app.js": [function (require, module, exports) {
+})({ "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/app.js": [function (require, module, exports) {
         'use strict';
 
         var _modulesMobileNav = require('./modules/mobile-nav');
@@ -26,7 +26,7 @@
         (0, _modulesMobileNav.mobileNav)();
         (0, _modulesScrollToTop.scrollToTop)();
         (0, _modulesScrollToSection.scrollToSection)($);
-    }, { "./modules/mobile-nav": "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js", "./modules/scroll-to-section": "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js", "./modules/scroll-to-top": "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-top.js" }], "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js": [function (require, module, exports) {
+    }, { "./modules/mobile-nav": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js", "./modules/scroll-to-section": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js", "./modules/scroll-to-top": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-top.js" }], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js": [function (require, module, exports) {
         'use strict';
 
         Object.defineProperty(exports, '__esModule', {
@@ -87,7 +87,7 @@
         }
 
         exports.mobileNav = mobileNav;
-    }, {}], "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js": [function (require, module, exports) {
+    }, {}], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js": [function (require, module, exports) {
         'use strict';
 
         Object.defineProperty(exports, '__esModule', {
@@ -121,7 +121,7 @@
         };
 
         exports.scrollToSection = scrollToSection;
-    }, {}], "/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-top.js": [function (require, module, exports) {
+    }, {}], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-top.js": [function (require, module, exports) {
         /*** Scroll to top ***/
         'use strict';
 
@@ -138,4 +138,4 @@
         }
 
         exports.scrollToTop = scrollToTop;
-    }, {}] }, {}, ["/Users/mantonsson/Dev/tutorials/wordpress/tutorial/wp-content/themes/vantage-child/src/scripts/app.js"]);
+    }, {}] }, {}, ["/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/app.js"]);
