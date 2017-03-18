@@ -166,12 +166,15 @@ $height-transition: min-height 300ms ease-in;
         @media (max-width: $min-desktop) and (orientation: portrait) {
             &::before {
                 @include underline(100%);
-                background: url('./svg/bracket-left.svg') top center no-repeat;
+                height: 17px;
+                background: url('./png/bracket-top.png') top center / contain no-repeat;
             }
 
             &::after {
-                @include underline();
+                @include underline(-17px);
                 background-color: black;
+                height: 17px;
+                background: url('./png/bracket-bottom.png') top center / contain no-repeat;
             }
         }
     }
