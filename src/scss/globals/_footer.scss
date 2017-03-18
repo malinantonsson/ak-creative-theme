@@ -5,7 +5,15 @@
         display: none;
     }
 
-    #footer-widgets {
+    #footer-widgets .widget {
+        padding: 0;
+    }
+    
+    .widget-title {
+        display: none;
+    }
+
+    /* #footer-widgets {
         .widget {
             margin-bottom: 1em;
             .widget-title {
@@ -16,6 +24,30 @@
             //mobile override
             @media screen and (max-width: 640px) {
                 padding-bottom: 0!important;
+            }
+        }
+    } */
+
+    h2 {
+        font-size: 36px;
+        color: $accent-color;
+        line-height: 1em;
+    }
+}
+
+.where-we-live {
+    @media (max-width: $min-desktop) {
+        > .panel-grid-cell:first-child {
+            padding-top: 1em!important;
+            border-top: 2px dotted;
+        }
+    }
+
+    @media (min-width: $min-desktop) {
+        > .panel-grid-cell {
+            > .widget:first-child {
+                padding-top: 1em!important;
+                border-top: 2px dotted;
             }
         }
     }
