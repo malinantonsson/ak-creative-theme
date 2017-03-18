@@ -22,7 +22,14 @@
 
 .page-number {
     font-size: 76px;
-    margin-top: 36px; // same as content h1
     font-family: "Crimson Text";
     color: #ffc72a;
+
+    .textwidget p:last-child {
+    	margin-bottom: 0.5em;
+    }
+
+    @media (min-width: $min-tablet) {
+    	margin-top: 36px; // same as content h1
+    }
 }
