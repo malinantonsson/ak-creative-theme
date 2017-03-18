@@ -10,12 +10,12 @@ $height-transition: min-height 300ms ease-in;
     }
 }
 
-@media (min-width: $min-desktop) {
+/* @media (min-width: $min-desktop) { */
     .main-navigation {
         border-bottom: 1px dotted lightgray;
-        margin-top: 1rem;
+        padding-top: 1rem;
     }
-}
+/* } */
 .ak-nav__wrapper {
     //this is the main nav on desktop
     @media (min-width: $min-desktop) {

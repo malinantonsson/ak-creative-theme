@@ -1,0 +1,11 @@
+.five-point-promise {
+	img {
+		margin: auto;
+	    display: block;
+
+		@media (min-width: $min-tablet) {
+			float: right;
+		}
+	}
+	
+}
