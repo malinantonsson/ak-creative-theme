@@ -94,6 +94,7 @@
             value: true
         });
         function scrollToSection($) {
+            var navheight = 110;
             var buttons = Array.from(document.querySelectorAll('[data-behaviour="scrollToSection"]'));
             if (buttons.lenght < 1) return;
 
@@ -105,14 +106,18 @@
                 return document.getElementById(id);
             }
 
+            function getNavHeight() {}
+
             buttons.forEach(function (btn, i) {
                 btn.addEventListener('click', function (evt) {
                     var target = getFragmentTarget(this.hash);
                     if (!target) return;
 
                     evt.preventDefault();
+                    var targetHeight = $(target).offset().top - navheight;
+                    console.log(targetHeight);
 
-                    $('html, body').animate({ scrollTop: $(target).offset().top }, 1000, function () {
+                    $('html, body').animate({ scrollTop: targetHeight }, 1000, function () {
                         //update browser location
                         window.location.hash = target.id;
                     });

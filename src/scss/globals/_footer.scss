@@ -66,3 +66,8 @@
         }
     }
 }
+
+//override widget spacing, looked weird on mobile
+body.responsive #footer-widgets .widget:last-child {
+    padding-bottom: 0;
+}
