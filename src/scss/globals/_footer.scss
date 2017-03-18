@@ -7,10 +7,24 @@
 
     #footer-widgets .widget {
         padding: 0;
+        width: 100%;
     }
-    
+
     .widget-title {
         display: none;
+    }
+
+    // target address at bottom
+    #footer-widgets > .widget_black_studio_tinymce {
+        margin-bottom: 1em;
+        p {
+            font-family: "Crimson Text";
+            color: $copy-light!important;
+
+            strong {
+                color: $copy-color;
+            }  
+        }  
     }
 
     /* #footer-widgets {
