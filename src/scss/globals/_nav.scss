@@ -12,7 +12,7 @@ $height-transition: min-height 300ms ease-in;
 
 /* @media (min-width: $min-desktop) { */
     .main-navigation {
-        border-bottom: 1px dotted lightgray;
+        border-bottom: 1px dotted $copy-light;
         padding-top: 1rem;
     }
 /* } */

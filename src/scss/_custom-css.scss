@@ -1,7 +1,7 @@
 //THESE SHOULD BE ADDED TO CMS
 
 .ak-nav__wrapper li a::after {
-    background: #ffc72a; 
+    background: $accent-color; 
 }
 
 #scroll-to-top {
@@ -13,7 +13,7 @@
 }
 
 .scroll-to-top__copy {
-  color: #ffc72a;
+  color: $accent-color;
 }
 
 /* .entry-title::before {
@@ -23,7 +23,7 @@
 .page-number {
     font-size: 76px;
     font-family: "Crimson Text";
-    color: #ffc72a;
+    color: $accent-color;
 
     .textwidget p:last-child {
     	margin-bottom: 0.5em;
