@@ -7,6 +7,7 @@ Author URI: http: //malinantonsson.com
 Template: vantage
 Version: 0.1
 */
+@import 'mixins/brackets';
 @import 'mixins/counter';
 @import 'mixins/underline';
 
@@ -23,6 +24,7 @@ Version: 0.1
 @import 'components/entry-content';
 @import 'components/entry-title';
 @import 'components/five-point-promise';
+@import 'components/homepage-first-row';
 @import 'components/panel-row-style';
 @import 'components/page-divider-vertical';
 @import 'components/page-intro';
@@ -32,6 +34,7 @@ Version: 0.1
 @import 'components/standout';
 @import 'components/scroll-to-section';
 @import 'components/scroll-to-top';
+@import 'components/twitter-feed';
 @import 'components/two-col-with-image';
 
 @import 'custom-css';

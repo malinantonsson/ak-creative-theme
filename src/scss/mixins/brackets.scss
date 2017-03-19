@@ -1,0 +1,18 @@
+@mixin bracket-left() {
+	width: 22px;
+	height: 100%;
+	position: absolute;
+	left: 15px;
+	content: '';
+	background: url('./svg/bracket-left.svg') top left / contain no-repeat;
+}
+
+@mixin bracket-right() {
+	width: 22px;
+	height: 100%;
+	position: absolute;
+	right: 15px;
+	top: 0;
+	content: '';
+	background: url('./svg/bracket-right.svg') top right / contain no-repeat;
+}

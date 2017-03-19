@@ -1,0 +1,27 @@
+.twitter-feed {
+	display: flex;
+	align-items: center;
+
+	.widget-title {
+		display: none;
+	}
+
+	.widget {
+		margin: 0;
+	}
+
+	//target twitter feed column
+	.panel-grid-cell-mobile-last {
+		position: relative;
+		padding-left: 45px!important;
+		padding-right: 45px!important;
+
+		&::before {
+			@include bracket-left();
+		}
+
+		&::after {
+			@include bracket-right();
+		}
+	}
+}
