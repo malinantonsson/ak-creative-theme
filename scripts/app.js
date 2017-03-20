@@ -21,15 +21,15 @@
 
         var _modulesScrollToTop = require('./modules/scroll-to-top');
 
+        var _modulesPersonalCarousel = require('./modules/personal-carousel');
+
         var $ = window.jQuery;
 
         (0, _modulesMobileNav.mobileNav)();
         (0, _modulesScrollToTop.scrollToTop)();
         (0, _modulesScrollToSection.scrollToSection)($);
-
-        console.log($('.personal-carousel'));
-        $('.personal-carousel').slick({ 'autoplay': true, 'mobileFirst': true });
-    }, { "./modules/mobile-nav": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js", "./modules/scroll-to-section": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js", "./modules/scroll-to-top": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-top.js" }], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js": [function (require, module, exports) {
+        (0, _modulesPersonalCarousel.personalCarousel)($);
+    }, { "./modules/mobile-nav": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js", "./modules/personal-carousel": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/personal-carousel.js", "./modules/scroll-to-section": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js", "./modules/scroll-to-top": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-top.js" }], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js": [function (require, module, exports) {
         'use strict';
 
         Object.defineProperty(exports, '__esModule', {
@@ -90,6 +90,18 @@
         }
 
         exports.mobileNav = mobileNav;
+    }, {}], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/personal-carousel.js": [function (require, module, exports) {
+        /*** Personal carousel ***/
+        'use strict';
+
+        Object.defineProperty(exports, '__esModule', {
+            value: true
+        });
+        function personalCarousel($) {
+            $('.personal-carousel').slick({ autoplay: true, mobileFirst: true, arrows: false });
+        }
+
+        exports.personalCarousel = personalCarousel;
     }, {}], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js": [function (require, module, exports) {
         'use strict';
 
