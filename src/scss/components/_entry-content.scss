@@ -7,9 +7,7 @@
         line-height: 1.2em;
         font-style: initial;
         font-family: "Crimson Text";
-
-        @media(min-width: $min-desktop) {
-            padding: 1em;
-        }
+        padding-top: 1em;
+        padding-bottom: 1em;
     }
 }

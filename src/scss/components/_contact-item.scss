@@ -1,0 +1,75 @@
+.contact-item {
+    /* margin-bottom: 1.5em; */
+    overflow: auto;
+    border-bottom: 2px dotted $copy-light;
+    padding-bottom: 1.5em;
+    padding-top: 1.5em;
+
+
+    &__wrapper {
+    	@media (min-width: $min-tablet) and (max-width: $min-desktop) {
+    		width: 30%;
+    		float: left;
+    	}
+    }
+
+	//looking for someone?
+    &--link {
+    	 .contact-item__wrapper {
+    		@media (min-width: $min-tablet) and (max-width: $min-desktop) {
+	    	 	width: 100%;
+	    	 	display: flex;
+			    align-items: center;
+			    justify-content: center;
+			}
+    	 }
+    }
+	
+	&__icon {
+		height: 25px;
+		width: 25px;
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 0.5em; 
+	}
+
+	&__icon--location {
+		background: url('./svg/map.svg') top center no-repeat;
+	}
+
+	&__icon--phone {
+		background: url('./svg/map.svg') top center no-repeat;
+	}
+
+	&__icon--mail {
+		background: url('./svg/map.svg') top center no-repeat;
+	}
+
+	&__icon--search {
+		background: url('./svg/magnify.svg') top center no-repeat;
+		vertical-align: initial;
+	}
+
+	&__copy--location {
+		font-weight: bold;
+    	font-family: "Crimson Text";
+    	font-size: 1.2em;
+	}
+
+	&__copy--mail {
+		border-bottom: 1px solid;
+	}
+
+	&__copy--link {
+		display: inline-block;
+		max-width: 70%;
+	}
+}
+
+.where-we-live {
+	.panel-grid-cell {
+    	@media (min-width: $min-tablet) and (max-width: $min-desktop) {
+			width: 100%!important;
+		}
+	}
+}

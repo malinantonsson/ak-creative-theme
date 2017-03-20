@@ -1,0 +1,19 @@
+.ak-social__wrapper {
+	padding-top: 1em;
+	display: flex;
+    align-items: center;
+    justify-content: space-around;
+
+	@media (min-width: $min-tablet) {
+    	justify-content: center;
+    }
+	
+    @media (min-width: $min-desktop) {
+    	justify-content: space-between;
+    }
+
+	&__icon {
+
+	}
+
+}

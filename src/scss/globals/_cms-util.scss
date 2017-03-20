@@ -1,3 +1,23 @@
 p:empty {
     display: none;
 }
+
+.textwidget {
+	ul {
+		list-style-type: disc;
+		margin-left: 0;
+	}
+}
+
+@media (min-width: $min-tablet) and (max-width: $min-desktop) {
+	#pg-9-4 .panel-grid-cell {
+		&#pgc-9-4-0 {
+			width: 30.044%!important;
+		}
+
+		&#pgc-9-4-1,
+		&#pgc-9-4-2 {
+    		width: 34.978%!important;
+		}
+	}
+}

@@ -1,0 +1,7 @@
+.homepage-first-row {
+	display: flex;
+
+	.panel-grid-cell:last-child {
+		align-self: center;
+	}
+}

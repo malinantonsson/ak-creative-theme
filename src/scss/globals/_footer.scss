@@ -5,7 +5,29 @@
         display: none;
     }
 
-    #footer-widgets {
+    #footer-widgets .widget {
+        padding: 0;
+        width: 100%;
+    }
+
+    .widget-title {
+        display: none;
+    }
+
+    // target address at bottom
+    #footer-widgets > .widget_black_studio_tinymce {
+        margin-bottom: 1em;
+        p {
+            font-family: "Crimson Text";
+            color: $copy-light!important;
+
+            strong {
+                color: $copy-color;
+            }  
+        }  
+    }
+
+    /* #footer-widgets {
         .widget {
             margin-bottom: 1em;
             .widget-title {
@@ -18,5 +40,54 @@
                 padding-bottom: 0!important;
             }
         }
+    } */
+
+    h2 {
+        font-size: 36px;
+        color: $accent-color;
+        line-height: 1em;
+    }
+}
+
+.where-we-live {
+    @media (max-width: $min-desktop) {
+        > .panel-grid-cell:first-child {
+            padding-top: 1em!important;
+            border-top: 2px dotted;
+            border-bottom: 2px dotted $copy-light;
+        }
+
+        > .panel-grid-cell {
+            padding-left: 0!important;
+            padding-right: 0!important;
+        }
+    }
+
+    @media (min-width: $min-desktop) {
+        > .panel-grid-cell {
+            > .widget:first-child {
+                border-top: 2px dotted;
+            }
+        }
+
+        .footer__img {
+            padding-top: 1em!important;
+            padding-bottom: 1em;
+            border-bottom: 2px dotted $copy-light;
+
+        }
+    }
+}
+
+//override widget spacing, looked weird on mobile
+body.responsive #footer-widgets .widget:last-child {
+    padding-bottom: 0;
+}
+
+ 
+body.responsive #footer-widgets .widget {
+    @media screen and (max-width: 640px) {
+        padding-bottom: 0;
+        margin-bottom: 0;
     }
 }

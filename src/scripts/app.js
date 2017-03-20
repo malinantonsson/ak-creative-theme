@@ -7,3 +7,7 @@ const $ = window.jQuery;
 mobileNav();
 scrollToTop();
 scrollToSection($);
+
+
+console.log($('.personal-carousel'));
+$('.personal-carousel').slick({'autoplay' : true, 'mobileFirst': true});

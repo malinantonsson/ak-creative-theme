@@ -1,3 +1,7 @@
 .entry-content h2 {
     margin-top: 0;
+
+    @media (min-width: $min-tablet) and (max-width: $min-desktop) {
+    	font-size: 33px!important;
+    }
 }
