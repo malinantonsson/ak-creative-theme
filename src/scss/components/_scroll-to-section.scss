@@ -8,11 +8,17 @@
     }
 
     &__icon {
-        height: 20px;
+        height: 30px;
         width: 30px;
         display: block;
         margin: auto;
-        background: url('./svg/scroll-down.svg') top center no-repeat;
+        transition: fill 300ms ease-in;
+    }
+
+    &:hover {
+        .scroll-to-section__icon {
+            fill: $accent-color;
+        }
     }
 
     &__bracket {

@@ -13,7 +13,31 @@
     }
 
 	&__icon {
-
 	}
-
 }
+
+.ak-social__icon {
+	max-width: 40px;
+
+	.ak-icon {
+		max-height: 32px;
+		transition: fill 300ms ease-in;
+
+		&:hover,
+		&:hover {
+			fill: $accent-color;
+		}
+	}
+}
+
+/* <a class="ak-social__icon ak-social__icon--linkedin" href="#" target="_blank">
+<img class="alignnone wp-image-79" src="http://localhost:8888/ak-creative/wp-content/uploads/2017/03/twitter.png" alt="" width="40" height="32" />
+</a>
+<a class="ak-social__icon ak-social__icon--twitter" href="#" target="_blank">
+<img class="alignnone wp-image-79" src="http://localhost:8888/ak-creative/wp-content/uploads/2017/03/twitter.png" alt="" width="40" height="32" /></a>
+
+<a class="ak-social__icon ak-social__icon--facebook" href="#" target="_blank"><img class="alignnone wp-image-80" src="http://localhost:8888/ak-creative/wp-content/uploads/2017/03/facebook.png" alt="" width="22" height="31" /></a>
+
+<svg><use xlink:href="http://localhost:8888/ak-creative/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:facebook"></svg>
+<svg><use xlink:href="http://localhost:8888/ak-creative/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:pen"></svg>
+ */

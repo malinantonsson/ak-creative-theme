@@ -140,7 +140,7 @@
             var SCROLL_TO_TOP = document.querySelector('#scroll-to-top');
 
             if (SCROLL_TO_TOP) {
-                var markup = '<span class="scroll-to-top__icon"></span>\n        {<span class="scroll-to-top__copy"> Back to Top </span>}';
+                var markup = '<svg class="ak-icon scroll-to-top__icon"><use xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:scroll-top"></svg>\n        {<span class="scroll-to-top__copy"> Back to Top </span>}';
                 SCROLL_TO_TOP.innerHTML = markup;
             }
         }

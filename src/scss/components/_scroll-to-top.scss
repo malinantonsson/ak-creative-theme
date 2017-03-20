@@ -10,8 +10,13 @@
     &.displayed {
         opacity: 1!important;
 
-        &:hover {
+        &:hover,
+        &:focus {
             opacity: 1!important;
+
+            .scroll-to-top__icon {
+                fill: $accent-color;
+            }
         }
     }
 
@@ -20,11 +25,19 @@
     }
 
     .scroll-to-top__icon {
-        height: 20px;
+        /* height: 20px;
         width: 30px;
         display: block;
         margin: auto;
-        background: url(./svg/scroll-top.svg) top center no-repeat;
+        background: url(./svg/scroll-top.svg) top center no-repeat; */
+        
+
+        transition: fill 300ms ease-in;
+        max-width: 100%;
+        width: 30px;
+        height: 30px;
+        display: block;
+        margin: auto;
     }
 }
 
