@@ -98,7 +98,10 @@
             value: true
         });
         function personalCarousel($) {
-            $('.personal-carousel').slick({ autoplay: true, mobileFirst: true, arrows: false });
+            var carousel = document.querySelector('.personal-carousel');
+            if (carousel) {
+                $('.personal-carousel').slick({ autoplay: true, mobileFirst: true, arrows: false });
+            }
         }
 
         exports.personalCarousel = personalCarousel;

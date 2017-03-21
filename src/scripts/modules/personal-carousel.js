@@ -1,6 +1,9 @@
 /*** Personal carousel ***/
 function personalCarousel ($) {
-	$('.personal-carousel').slick({autoplay : true, mobileFirst: true, arrows : false});
+	const carousel = document.querySelector('.personal-carousel');
+	if(carousel) {
+		$('.personal-carousel').slick({autoplay : true, mobileFirst: true, arrows : false});
+	}
 }
 
 export { personalCarousel };
