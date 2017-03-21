@@ -16,12 +16,23 @@
 		padding-left: 45px!important;
 		padding-right: 45px!important;
 
+		//force max width on mobile
+		@media(max-width: $min-desktop) {
+			width: 100%!important;
+		}
+
 		&::before {
 			@include bracket-left();
 		}
 
 		&::after {
 			@include bracket-right();
+		}
+	}
+
+	.panel-grid-cell-empty {
+		@media(max-width: $min-desktop) {
+			display: none;
 		}
 	}
 }

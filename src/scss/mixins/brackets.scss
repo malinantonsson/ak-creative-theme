@@ -4,7 +4,7 @@
 	position: absolute;
 	left: 15px;
 	content: '';
-	background: url('./svg/bracket-left.svg') top left / contain no-repeat;
+	background: url('./svg/bracket-left.svg') top left / cover no-repeat;
 }
 
 @mixin bracket-right() {
@@ -14,7 +14,7 @@
 	right: 15px;
 	top: 0;
 	content: '';
-	background: url('./svg/bracket-right.svg') top right / contain no-repeat;
+	background: url('./svg/bracket-right.svg') top right / cover no-repeat;
 }
 
 @mixin bracket-top() {
@@ -23,7 +23,7 @@
 	position: absolute;
 	top: 0;
 	content: '';
-	background: url('./svg/bracket-top.svg') top left / contain no-repeat;
+	background: url('./svg/bracket-top.svg') top left / cover no-repeat;
 }
 
 @mixin bracket-bottom() {
@@ -32,5 +32,5 @@
 	position: absolute;
 	bottom: 0;
 	content: '';
-	background: url('./svg/bracket-bottom.svg') bottom left / contain no-repeat;
+	background: url('./svg/bracket-bottom.svg') bottom left / cover no-repeat;
 }
