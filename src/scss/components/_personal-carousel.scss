@@ -3,9 +3,16 @@
 	float: right;
 	padding-top: 1em;
 	padding-bottom: 1em;
-	position: relative;
 
-	margin: -3em 1em 0;
+	@media (max-width: $min-desktop) {
+		position: absolute;
+		top: 4em;
+		right: 10px;
+	}
+
+	@media (min-width: $min-tablet) {
+		position: relative;
+	}
 
 	&::before {
 		@include bracket-top();
