@@ -2,6 +2,9 @@
 	display: flex;
 	align-items: center;
 
+	@media (max-width: $min-tablet) {
+		flex-direction: column;
+	}
 	.widget-title {
 		display: none;
 	}
@@ -27,6 +30,20 @@
 
 		&::after {
 			@include bracket-right();
+		}
+
+		@media (min-width: 413px) { //iphone 6
+			&::before,
+			&::after {
+				width: 18px
+			}
+		}
+
+		@media (min-width: 567px) { //iphone 5 landscape
+			&::before,
+			&::after {
+				width: 12px
+			}
 		}
 	}
 
