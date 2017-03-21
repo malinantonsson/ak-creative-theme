@@ -5,6 +5,10 @@
     padding-bottom: 1.5em;
     padding-top: 1.5em;
 
+    br {
+    	display: none;
+    }
+
 
     &__wrapper {
     	@media (min-width: $min-tablet) and (max-width: $min-desktop) {
@@ -34,15 +38,15 @@
 	}
 
 	&__icon--location {
-		background: url('./svg/map.svg') top center no-repeat;
+		//background: url('./svg/map.svg') top center no-repeat;
 	}
 
 	&__icon--phone {
-		background: url('./svg/map.svg') top center no-repeat;
+		//background: url('./svg/map.svg') top center no-repeat;
 	}
 
 	&__icon--mail {
-		background: url('./svg/map.svg') top center no-repeat;
+		//background: url('./svg/map.svg') top center no-repeat;
 	}
 
 	&__icon--search {
