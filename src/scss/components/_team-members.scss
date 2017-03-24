@@ -1,0 +1,66 @@
+$team-img-ratio: 205%;
+.tmm {
+
+	.tmm_names {
+    	font-family: "Crimson Text";
+    	font-weight: 700;
+	}
+
+	.tmm_job {
+    	font-family: "Crimson Text";
+		font-style: italic;
+		text-transform: none;
+		color: $copy-color;
+	}
+
+	.tmm_member {
+		border-top: none!important;
+		border-bottom: 0;
+		box-shadow: none;
+		text-align: left;
+
+		.tmm_photo {
+			margin-top: 0;
+			border: none;
+			border-radius: 0!important;
+			box-shadow: none;
+			margin-left: 0!important;
+			/* height: 0;
+			padding-bottom: $team-img-ratio; */
+
+		}
+
+		.tmm_textblock {
+			.tmm_scblock {
+				display: flex;
+    			flex-direction: column;
+			}
+
+			[href*=tel] { 
+				display: block;
+
+				&::before {
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					background: black;
+					content: '';
+				}	
+			}
+			    
+			.tmm_sociallink {
+				img {
+					display: none;
+				}
+
+				
+
+				&::after {
+					content: attr(title);
+				}
+			}
+		}
+
+		//content: attr(name);
+	}
+}
