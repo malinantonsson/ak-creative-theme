@@ -1,3 +1,44 @@
 .page-intro {
-    
+    @media (max-width: $min-desktop) {
+        h1 {
+          margin-bottom: 0;
+        }
+        
+        .panel-grid-cell:last-child {
+            width: 100%!important;
+        }
+    }
+
+    @media (min-width: $min-tablet) and (max-width: $min-desktop) {
+        .panel-grid-cell:last-child {
+            display: flex;
+            align-items: flex-start;
+
+            .panel-last-child {
+                max-width: 60%!important;
+                margin-left: 3em;
+            }
+        }
+    }
+}
+
+.page-intro__first-paragraph {
+  margin-top: 1em;
+
+  @media (min-width: $min-desktop) {
+    max-width: 60%;
+  }
+
+
+  @media (max-width: $min-tablet) {
+    &.page-intro__first-paragraph--hidden-mobile {
+      display: none;
+    }
+  }
+  
+   @media (min-width: $min-tablet) {
+    &.page-intro__first-paragraph--visible-mobile {
+      display: none;
+    }
+  }
 }

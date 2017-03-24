@@ -1,4 +1,26 @@
 .personal-carousel.slick-slider{
 	max-width: 120px;
 	float: right;
+	padding-top: 1em;
+	padding-bottom: 1em;
+
+	@media (max-width: $min-desktop) {
+		position: absolute;
+		top: 4em;
+		right: 10px;
+	}
+
+	@media (min-width: $min-desktop) {
+		position: relative;
+	}
+
+	&::before {
+		@include bracket-top();
+		background: black;
+	}
+
+	&::after {
+		@include bracket-bottom();
+		background: black;
+	}
 }

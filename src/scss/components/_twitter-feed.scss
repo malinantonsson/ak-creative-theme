@@ -2,6 +2,9 @@
 	display: flex;
 	align-items: center;
 
+	@media (max-width: $min-tablet) {
+		flex-direction: column;
+	}
 	.widget-title {
 		display: none;
 	}
@@ -16,12 +19,37 @@
 		padding-left: 45px!important;
 		padding-right: 45px!important;
 
+		//force max width on mobile
+		@media(max-width: $min-desktop) {
+			width: 100%!important;
+		}
+
 		&::before {
 			@include bracket-left();
 		}
 
 		&::after {
 			@include bracket-right();
+		}
+
+		@media (min-width: 413px) { //iphone 6
+			&::before,
+			&::after {
+				width: 18px
+			}
+		}
+
+		@media (min-width: 567px) { //iphone 5 landscape
+			&::before,
+			&::after {
+				width: 12px
+			}
+		}
+	}
+
+	.panel-grid-cell-empty {
+		@media(max-width: $min-desktop) {
+			display: none;
 		}
 	}
 }

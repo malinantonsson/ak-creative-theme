@@ -25,11 +25,16 @@
     font-family: "Crimson Text";
     color: $accent-color;
 
+    br {
+      display: none;
+    }
+
     .textwidget p:last-child {
     	margin-bottom: 0.5em;
     }
 
-    @media (min-width: $min-tablet) {
-    	margin-top: 36px; // same as content h1
+    @media (min-width: $min-desktop) {
+      margin-top: 36px; // same as content h1
+      display: inline-block;
     }
 }
