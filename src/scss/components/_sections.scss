@@ -1,0 +1,9 @@
+.section,
+.inner-section {
+	opacity: 0;
+	transition: opacity 500ms ease-in;
+
+	&--is-visable {
+		opacity: 1;
+	}
+}

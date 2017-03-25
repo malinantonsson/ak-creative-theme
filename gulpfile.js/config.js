@@ -24,6 +24,10 @@ module.exports = {
     dist: 'scripts',
     src: join('src', 'scripts')
   },
+  vendorScripts: {
+    dist: 'scripts/vendor/',
+    src: join('src', 'scripts/vendor/*.js')
+  },
   styles: {
     dist: '',
     src: join('src', 'scss')

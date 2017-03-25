@@ -23,13 +23,16 @@
 
         var _modulesPersonalCarousel = require('./modules/personal-carousel');
 
+        var _modulesSections = require('./modules/sections');
+
         var $ = window.jQuery;
 
         (0, _modulesMobileNav.mobileNav)();
         (0, _modulesScrollToTop.scrollToTop)();
         (0, _modulesScrollToSection.scrollToSection)($);
         (0, _modulesPersonalCarousel.personalCarousel)($);
-    }, { "./modules/mobile-nav": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js", "./modules/personal-carousel": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/personal-carousel.js", "./modules/scroll-to-section": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js", "./modules/scroll-to-top": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-top.js" }], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js": [function (require, module, exports) {
+        (0, _modulesSections.sections)();
+    }, { "./modules/mobile-nav": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js", "./modules/personal-carousel": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/personal-carousel.js", "./modules/scroll-to-section": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-section.js", "./modules/scroll-to-top": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/scroll-to-top.js", "./modules/sections": "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/sections.js" }], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/mobile-nav.js": [function (require, module, exports) {
         'use strict';
 
         Object.defineProperty(exports, '__esModule', {
@@ -161,4 +164,46 @@
         }
 
         exports.scrollToTop = scrollToTop;
+    }, {}], "/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/modules/sections.js": [function (require, module, exports) {
+        /*** Personal carousel ***/
+
+        /** selectors: 
+        	main item: '.section'
+        	inner items: '.section-${id}`',
+        	//example: section-what-we-do
+        	styles: .section-inner
+        **/
+
+        'use strict';
+
+        Object.defineProperty(exports, '__esModule', {
+            value: true
+        });
+        function sections() {
+            var sections = Array.from(document.querySelectorAll('.section'));
+            sections.forEach(function (section) {
+                var id = section.id;
+                var innerSections = undefined;
+                if (id) {
+                    //check for inner sections
+                    innerSections = Array.from(document.querySelectorAll('.section-' + id));
+                }
+
+                var waypoint = new Waypoint({
+                    element: section,
+                    handler: function handler() {
+                        this.element.classList.add('section--is-visable');
+                        //show inner section
+                        if (innerSections.length > 0) {
+                            innerSections.forEach(function (inner) {
+                                inner.classList.add('section--is-visable');
+                            });
+                        }
+                    },
+                    offset: '50%'
+                });
+            });
+        }
+
+        exports.sections = sections;
     }, {}] }, {}, ["/Users/malinantonsson/Dev/projects/mamp/ak-creative/wp-content/themes/vantage-child/src/scripts/app.js"]);
