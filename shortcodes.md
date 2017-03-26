@@ -34,9 +34,9 @@ svg
 
 
 tel
-<div class="contact-item__wrapper"><svg class="ak-icon contact-item__icon contact-item__icon--tel"><use xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:phone"></svg><a href="tel:%linkNumber%" class="contact-item__copy contact-item__copy--phone">%formattedNumber%</a></div>
+<div class="contact-item__wrapper"><svg class="ak-icon contact-item__icon contact-item__icon--tel"><use xlink:href="/wp-content/plugins/wp-svg-spritemap-master/defs.svg#:phone"></svg><a href="tel:%linkNumber%" class="contact-item__copy contact-item__copy--phone">%displayNumber%</a></div>
 
-[tel linkNumber="44-562-867-5309" formattedNumber="+44 (0)844 381 4718"][/tel]
+[tel linkNumber="44-562-867-5309" displayNumber="+44 (0)844 381 4718"][/tel]
 
 mail
 [mail address="london@andyknell.com"][/mail]
@@ -48,6 +48,6 @@ location:
 
 <div class="contact-item">
 [location location="London"][/location]
-[tel linkNumber="44-562-867-5309" formattedNumber="+44 (0)844 381 4718"][/tel]
+[tel linkNumber="44-562-867-5309" displayNumber="+44 (0)844 381 4718"][/tel]
 [mail address="london@andyknell.com"][/mail]
 </div>
