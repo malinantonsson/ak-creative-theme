@@ -33,3 +33,15 @@
 		}
 	}
 }
+
+.five-point-diagram--hidden-mobile {
+	@media (max-width: $min-tablet) {
+		display: none;
+	}
+}
+
+.five-point-diagram--visible-mobile {
+	@media (min-width: $min-tablet) {
+		display: none;
+	}
+}
