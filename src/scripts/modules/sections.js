@@ -7,7 +7,22 @@
 	styles: .section-inner
 **/
 
+function footerSection() {
+	const footer = document.getElementById('footer-widgets');
+	console.log(footer);
+	if (footer) {
+		var waypoint = new Waypoint({
+		  element: footer,
+		  handler: function() {
+		  	this.element.classList.add('section--is-visable');
+		  },
+	  	  offset: '80%' 
+		});
+	}
+}
+
 function sections () {
+	footerSection();
 	const sections = Array.from(document.querySelectorAll('.section'));
 	sections.forEach(function(section) {
 		const id = section.id;

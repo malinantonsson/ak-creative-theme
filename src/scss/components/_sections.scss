@@ -1,9 +1,17 @@
 .section,
+#footer-widgets,
 .inner-section {
 	opacity: 0;
-	transition: opacity 500ms ease-in;
+	transform: scale(0.5, 0.5);
+	transition: all 500ms ease-in;
 
 	&--is-visable {
 		opacity: 1;
+		transform: scale(1, 1);
 	}
+}
+
+#footer-widgets.section--is-visable {
+	opacity: 1;
+	transform: scale(1, 1);
 }
