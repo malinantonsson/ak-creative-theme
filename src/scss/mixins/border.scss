@@ -1,0 +1,3 @@
+@mixin border-dotted($position, $color: $copy-color) {
+	border-#{$position}: 2px dotted $color;
+}

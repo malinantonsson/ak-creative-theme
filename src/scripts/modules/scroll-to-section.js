@@ -1,5 +1,5 @@
 function scrollToSection($) { 
-  const navheight = 110;
+  //const navheight = 130;
   const buttons = Array.from(document.querySelectorAll('[data-behaviour="scrollToSection"]'));
   if (buttons.lenght < 1) return;
 
@@ -19,11 +19,13 @@ function scrollToSection($) {
   buttons.forEach( function(btn, i) {
     btn.addEventListener('click', function(evt) {
       let target = getFragmentTarget(this.hash);
+      const nav = document.querySelector('.site-navigation').offsetHeight;
+      const navheight = nav + 50;
       if(!target) return;
 
       evt.preventDefault();
       let targetHeight = $(target).offset().top - navheight;
-      console.log(targetHeight);
+
 
       $('html, body').animate(
         { scrollTop: targetHeight },

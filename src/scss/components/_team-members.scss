@@ -1,0 +1,127 @@
+$team-img-ratio: 205%;
+.tmm {
+
+	.tmm_names {
+    	font-family: "Crimson Text";
+    	font-weight: 700;
+    	margin-bottom: 0;
+    	margin-top: 0;
+	}
+
+	.tmm_job {
+    	font-family: "Crimson Text";
+		font-style: italic;
+		text-transform: none;
+		color: $copy-color;
+	}
+
+	.tmm_desc {
+		margin-top: 0.5em;
+		margin-bottom: 0;
+		padding-right: 0;
+		padding-left: 0;
+		padding-bottom: 0.5em;
+		@include border-dotted(bottom, $copy-light);
+	}
+	
+	//overrides
+	@media only screen and (max-width: 40em) {
+		.tmm_3_columns .tmm_member .tmm_photo {
+			border: none!important;
+			border-radius: 0!important;
+			box-shadow: none!important;
+		}
+	}
+
+	@media only screen and (max-width: 64.063em) {
+		.tmm_3_columns .tmm_member .tmm_photo {
+			border: none!important;
+			border-radius: 0!important;
+			box-shadow: none!important;
+		}
+	}
+
+	.tmm_member {
+		border-top: none!important;
+		border-bottom: 0;
+		box-shadow: none;
+		text-align: left;
+		margin-top: 0;
+
+		.tmm_photo {
+			margin-top: 0;
+			border: none;
+			border-radius: 0!important;
+			box-shadow: none;
+			margin-left: 0!important;
+			width: 200px;
+    		height: 200px;
+		}
+
+		.tmm_textblock {
+			padding-left: 0;
+			padding-right: 0;
+    		margin-top: 1em;
+			@include border-dotted(top);
+
+			.tmm_scblock {
+				display: flex;
+    			flex-direction: column;
+			}
+			    
+			.tmm_sociallink {
+				display: flex;
+				align-items: center;
+    			font-size: 0.8em;
+    			margin-bottom: 0;
+
+				img {
+					display: none;
+				}
+
+				&::before {
+					display: inline-block;
+					width: 20px;
+					height: 20px;
+					content: '';
+					margin-right: 0.5em;
+				}
+
+				&::after {
+					content: attr(title);
+				}
+			}
+	
+			//phone link
+			[href*=tel] { 
+				&::before {
+					background: url('./svg/maps/phone.svg') top left / contain no-repeat;
+				}	
+			}
+
+			//mail link
+			[href*=mailto] { 
+
+				&::after {
+					border-bottom: 1px solid;
+				}
+				&::before {
+					background: url('./svg/maps/mail.svg') top left / contain no-repeat;
+				}	
+			}
+
+			//linkedin
+			[title*=linkedin] { 
+				&::before {
+					background: url('./svg/maps/linkedin.svg') top left / contain no-repeat;
+				}	
+
+				&::after {
+					display: none;
+				}
+			}
+		}
+
+		//content: attr(name);
+	}
+}
