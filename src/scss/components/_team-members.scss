@@ -55,7 +55,7 @@ $team-img-ratio: 205%;
 			box-shadow: none;
 			margin-left: 0!important;
 			width: 200px;
-    		height: 200px;
+    		height: 240px;
 		}
 
 		.tmm_textblock {
@@ -111,7 +111,7 @@ $team-img-ratio: 205%;
 			}
 
 			//linkedin
-			[title*=linkedin] { 
+			[href*=linkedin] { 
 				&::before {
 					background: url('./svg/maps/linkedin.svg') top left / contain no-repeat;
 				}	
