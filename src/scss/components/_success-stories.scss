@@ -1,10 +1,18 @@
 .onePage.slick-slider {
-	display: flex;
-	flex-wrap: wrap;
-    justify-content: space-between;
+    border-top: 2px dotted;
 
-	.slick-arrow {
-		order: 1;
+	.onePage-post__headline {
+		color: $copy-color!important;
+		margin: .5em 0 0!important;
+		font-weight: 600;
+	}
+
+	em {
+		font-family: "Crimson Text";
+	}
+
+	.onePage-post__content p:first-child {
+		margin-top: 0!important;
 	}
 }
 
@@ -15,8 +23,9 @@
 
 	.onePage-archive__date {
 		font-style: italic;
+		font-family: "Crimson Text";
 	}
-	
+
 	.slick-list {
 		height: 100%!important;
 	}
@@ -46,12 +55,30 @@
 	position: relative;
 }
 
+.onePage__bottom {
+	display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 .onePage__social {
-	position: absolute;
-	margin: auto;
-	left: 0;
-	right: 0;
-	text-align: center;
-	bottom: 0;
-	z-index: 0;
+}
+
+.onePage__button,
+.onePage__button:focus {
+	border: none;
+    background: none;
+    padding: 0;
+    outline: none;
+
+    .onePage__icon {
+	    height: 30px;
+	    width: 30px;
+        transition: fill 300ms ease-in;
+    }
+
+    &:hover {
+        .onePage__icon {
+            fill: $accent-color;
+        }
+    }
 }
