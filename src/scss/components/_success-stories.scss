@@ -1,13 +1,22 @@
-.success-stories.slick-slider {
+.onePage.slick-slider {
 	display: flex;
 	flex-wrap: wrap;
+    justify-content: space-between;
 
 	.slick-arrow {
 		order: 1;
 	}
 }
 
-.success-archive__list {
+.onePage-archive__list {
+	.onePage-archive__title {
+		text-decoration: underline;
+	}
+
+	.onePage-archive__date {
+		font-style: italic;
+	}
+	
 	.slick-list {
 		height: 100%!important;
 	}
@@ -15,4 +24,34 @@
 	.slick-track {
 		transform: translate3d(0px, 0px, 0px)!important;
 	}
+}
+
+.onePage-archive__headline {
+	color: $copy-color!important;
+	position: relative;
+	font-weight: 600!important;
+
+
+	&::after {
+		width: 100%;
+		content: '';
+		position: absolute;
+		border-bottom: 2px dotted;
+		left: 0;
+		bottom: -.5em;
+	}
+}
+
+.onePage-wrapper {
+	position: relative;
+}
+
+.onePage__social {
+	position: absolute;
+	margin: auto;
+	left: 0;
+	right: 0;
+	text-align: center;
+	bottom: 0;
+	z-index: 0;
 }
