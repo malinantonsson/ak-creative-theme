@@ -1,4 +1,4 @@
-.archive-and-post {
+.heading-no-margin-top {
 	h1, h2 {
 		margin-top: 0!important;
 	}
@@ -33,11 +33,15 @@
 	}
 
 	.slick-list {
-		height: 100%!important;
+		//height: 100%!important;
 	}
 
 	.slick-track {
-		transform: translate3d(0px, 0px, 0px)!important;
+		//transform: translate3d(0px, 0px, 0px)!important;
+	}
+
+	.onePage-archive__item {
+		color: $copy-color!important;
 	}
 }
 
