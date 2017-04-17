@@ -1,3 +1,4 @@
+$bottom: bottom;
 p:empty {
     display: none;
 }
@@ -20,4 +21,9 @@ p:empty {
     		width: 34.978%!important;
 		}
 	}
+}
+
+hr {
+	background: none!important;
+	@include border-dotted($bottom);
 }
