@@ -1,0 +1,43 @@
+.ak-network {
+	.textwidget {
+		display: flex;
+		flex-wrap: wrap;
+		align-items: center;
+
+		@media (min-width: $min-desktop) {
+			max-width: 90%;
+	    	margin: auto;
+	    }
+
+		p {
+			flex: 0 1 50%;
+
+			@media (min-width: $min-tablet) {
+				flex: 0 1 33%;
+			}
+
+			@media (min-width: $min-desktop) {
+				flex: 0 1 20%;
+			}
+
+			&:last-child {
+				margin-bottom: 1em;
+			}
+		}
+
+		img {
+			max-height: 100px;
+			width: auto;
+			
+			@media (min-width: $min-desktop) {
+				max-height: 75px;
+			}
+		}
+
+		a {
+			padding: 1em;
+			display: block;
+			text-align: center;
+		}
+	}
+}
