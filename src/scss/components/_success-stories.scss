@@ -42,6 +42,7 @@
 
 	.onePage-archive__item {
 		color: $copy-color!important;
+		margin-bottom: .5em;
 	}
 }
 
@@ -69,6 +70,7 @@
 	display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 1em;
 }
 .onePage__social {
 }
