@@ -75,6 +75,15 @@
         }
     }
 
+    @media (min-width: $min-tablet) and (max-width: $min-desktop) {
+        > .panel-grid-cell:last-child {
+            width: 70%!important;
+            align-self: flex-end;
+        }
+    }
+
+        
+
     @media (min-width: $min-desktop) {
         > .panel-grid-cell {
             > .widget:first-child {

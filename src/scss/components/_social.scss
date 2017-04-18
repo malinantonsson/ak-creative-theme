@@ -4,8 +4,10 @@
     align-items: center;
     justify-content: space-around;
 
-	@media (min-width: $min-tablet) {
-    	justify-content: center;
+	@media (min-width: $min-tablet) and (max-width: $min-desktop) {
+    	justify-content: flex-start;
+	    width: 70%;
+	    float: right;
     }
 	
     @media (min-width: $min-desktop) {

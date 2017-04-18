@@ -4,10 +4,31 @@
     
     padding-bottom: 1.5em;
     padding-top: 1.5em;
-    border-top: 2px dotted $copy-light;
+    //border-top: 2px dotted $copy-light;
+
+	@media (max-width: $min-desktop) {
+		position: relative;
+		
+		&::before {
+			display: block;
+		    content: '';
+		    height: 2px;
+		    width: 100%;
+		    position: absolute;
+		    top: 0;
+		    right: 0;
+    		border-bottom: 2px dotted $copy-light;
+		}
+	} 
+
+	@media (min-width: $min-tablet) {
+		&::before {
+			width: 70%;
+		}
+	}  
 
     @media(min-width: $min-desktop) {
-    	border-top: none;
+    	//border-top: none;
     	border-bottom: 2px dotted $copy-light;
     }
 
@@ -26,12 +47,20 @@
 	//looking for someone?
     &--link {
     	 border-bottom: 2px dotted #e2e4e5;
-    	 .contact-item__wrapper {
-    		@media (min-width: $min-tablet) and (max-width: $min-desktop) {
+		
+		@media (min-width: $min-tablet) and (max-width: $min-desktop) {
+    	 	width: 70%;
+    	 	float: right;
+
+    	 	&::before {
+				width: 100%;
+			}
+
+    	 	.contact-item__wrapper {
 	    	 	width: 100%;
 	    	 	display: flex;
 			    align-items: center;
-			    justify-content: center;
+			    justify-content: flex-start;
 			}
     	 }
     }
