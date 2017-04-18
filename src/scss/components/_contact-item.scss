@@ -1,9 +1,15 @@
 .contact-item {
     /* margin-bottom: 1.5em; */
     overflow: auto;
-    border-bottom: 2px dotted $copy-light;
+    
     padding-bottom: 1.5em;
     padding-top: 1.5em;
+    border-top: 2px dotted $copy-light;
+
+    @media(min-width: $min-desktop) {
+    	border-top: none;
+    	border-bottom: 2px dotted $copy-light;
+    }
 
     br {
     	display: none;
@@ -19,6 +25,7 @@
 
 	//looking for someone?
     &--link {
+    	 border-bottom: 2px dotted #e2e4e5;
     	 .contact-item__wrapper {
     		@media (min-width: $min-tablet) and (max-width: $min-desktop) {
 	    	 	width: 100%;

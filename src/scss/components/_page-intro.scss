@@ -35,13 +35,13 @@
     }
 
     @media (max-width: $min-tablet) {
-      display: none;
+      display: none!important;
     }
   }
 
   @media (min-width: $min-tablet) {
     &.page-intro__first-paragraph--visible-mobile {
-      display: none;
+      display: none!important;
     }
   }
 }

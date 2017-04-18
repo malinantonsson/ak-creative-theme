@@ -27,3 +27,49 @@ hr {
 	background: none!important;
 	@include border-dotted($bottom);
 }
+
+/* hide/display on mobile */
+@media (min-width: $min-tablet) {
+	.visible-mobile {
+	  display: none!important;
+	}
+}
+
+@media (max-width: $min-tablet) {
+	.hidden-mobile {
+	  display: none!important;
+	}
+}
+
+
+/* hide/display on desktop */
+@media (max-width: $min-desktop) {
+	.visible-desktop {
+	  display: none!important;
+	}
+}
+
+@media (min-width: $min-tablet) {
+	.hidden-desktop {
+	  display: none!important;
+	}
+}
+
+/* hide/display on tablet */
+@media (max-width: $min-tablet) {
+	.visible-tablet {
+	  display: none!important;
+	}
+}
+
+@media (min-width: $min-desktop) {
+	.visible-tablet {
+	  display: none!important;
+	}
+}
+
+@media (min-width: $min-tablet) and (max-width: $min-desktop) {
+	.hidden-tablet {
+	  display: none!important;
+	}
+}

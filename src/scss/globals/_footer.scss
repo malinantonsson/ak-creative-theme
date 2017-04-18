@@ -50,16 +50,28 @@
 }
 
 .where-we-live {
+    //fix tablet footer order
+    @media (max-width: $min-desktop) {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
     @media (max-width: $min-desktop) {
         > .panel-grid-cell:first-child {
             padding-top: 1em!important;
-            border-top: 2px dotted;
-            border-bottom: 2px dotted $copy-light;
+            //border-bottom: 2px dotted $copy-light;
         }
 
         > .panel-grid-cell {
             padding-left: 0!important;
             padding-right: 0!important;
+        }
+    }
+
+    @media (max-width: $min-desktop) {
+        > .panel-grid-cell:last-child {
+            border-top: 2px dotted;
+            padding-top: 1em!important;
         }
     }
 
