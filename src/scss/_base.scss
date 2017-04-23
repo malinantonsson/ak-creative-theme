@@ -8,6 +8,9 @@ $mobile-landscape: 567px;
 $min-tablet: 767px;
 $min-desktop: 958px;
 
+$font-family-serif: "Crimson Text", serif;
+$font-family: "PT Sans", helvetica, Arial, sans-serif;
+
 // sets the max site width
 body.responsive.layout-full #page-wrapper .full-container {
     max-width: 940px;
@@ -23,5 +26,5 @@ a {
 }
 
 em {
-	font-family: "Crimson Text";
+	font-family: $font-family-serif;
 } 

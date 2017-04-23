@@ -1,28 +1,36 @@
-.ak-post-nav {}
-
 .ak-post-nav {
-	display: flex;
-    justify-content: space-between;
-    align-items: center;
     margin-top: 1em;
-}
 
-.ak-post-nav__button,
-.ak-post-nav__button:focus {
-	border: none;
-    background: none;
-    padding: 0;
-    outline: none;
-
-    .ak-post-nav__icon {
-	    height: 30px;
-	    width: 30px;
-        transition: fill 300ms ease-in;
+    &__label {
+        display: block;
+        text-align: center;
+        font-weight: 600;
+        font-family: $font-family-serif;
     }
 
-    &:hover {
+    &__inner {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    &__button,
+    &__button:focus {
+        border: none;
+        background: none;
+        padding: 0;
+        outline: none;
+
         .ak-post-nav__icon {
-            fill: $accent-color;
+            height: 30px;
+            width: 30px;
+            transition: fill 300ms ease-in;
+        }
+
+        &:hover {
+            .ak-post-nav__icon {
+                fill: $accent-color;
+            }
         }
     }
 }
