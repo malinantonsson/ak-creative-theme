@@ -73,3 +73,9 @@ hr {
 	  display: none!important;
 	}
 }
+
+.heading-no-margin-top {
+	h1, h2 {
+		margin-top: 0!important;
+	}
+}
