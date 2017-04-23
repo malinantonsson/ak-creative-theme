@@ -27,35 +27,3 @@ gulp.task('modernizr', ['scripts', 'styles'], modernizr);
 gulp.task('scripts', ['clean:scripts', 'copy-scripts'], scripts);
 gulp.task('styles', ['clean:styles'], styles);
 gulp.task('watch', ['modernizr', 'scripts', 'styles'], watch);
-
-
-/*const sass = require('gulp-sass');
-const babel = require('gulp-babel');
-*/
-/*const src = '/src/';
-const dist = '/';
-const sassSrc = src + 'scss/ ** /*.scss';
-const jsSrc = src + 'scripts/ ** /*.js';*/
-
-/*gulp.task('styles', () => {
-    gulp.src(sassSrc)
-        .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest(dist));
-});
-
-gulp.task('scripts', () => {
-    return gulp.src(jsSrc)
-        .pipe(babel({
-            presets: ['es2015']
-        }))
-        .pipe(gulp.dest(dist));
-});
-
-
-//Watch task
-gulp.task('default',() => {
-    gulp.watch(sassSrc,['styles']);
-    gulp.watch(jsSrc,['scripts']);
-});*/
-
-
