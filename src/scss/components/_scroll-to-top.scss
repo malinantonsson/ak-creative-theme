@@ -1,3 +1,9 @@
+/*****
+    
+   Overrides for scroll to top button
+
+****/
+
 #scroll-to-top {
     display: block;
     position: static;
@@ -25,13 +31,6 @@
     }
 
     .scroll-to-top__icon {
-        /* height: 20px;
-        width: 30px;
-        display: block;
-        margin: auto;
-        background: url(./svg/scroll-top.svg) top center no-repeat; */
-        
-
         transition: fill 300ms ease-in;
         max-width: 100%;
         width: 30px;

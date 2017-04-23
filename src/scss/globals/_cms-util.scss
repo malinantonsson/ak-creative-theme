@@ -79,3 +79,14 @@ hr {
 		margin-top: 0!important;
 	}
 }
+
+.two-col-with-image {
+	img {
+		margin: auto;
+	    display: block;
+
+		@media (min-width: $min-tablet) {
+			float: right;
+		}
+	}
+}

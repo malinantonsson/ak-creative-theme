@@ -1,3 +1,12 @@
+/*****
+	
+	Styles for the contact items in the footer
+	used sitewide
+	include city name, tel, email with icons
+	also inlcudes "looking for someone"-link
+
+****/
+
 .contact-item {
     /* margin-bottom: 1.5em; */
     overflow: auto;
@@ -73,17 +82,11 @@
 		margin-right: 0.5em; 
 	}
 
-	&__icon--location {
-		//background: url('./svg/map.svg') top center no-repeat;
-	}
+	&__icon--location {}
 
-	&__icon--phone {
-		//background: url('./svg/map.svg') top center no-repeat;
-	}
+	&__icon--phone {}
 
-	&__icon--mail {
-		//background: url('./svg/map.svg') top center no-repeat;
-	}
+	&__icon--mail {}
 
 	&__icon--search {
 		background: url('./svg/magnify.svg') top center no-repeat;
