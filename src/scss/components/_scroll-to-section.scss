@@ -4,7 +4,7 @@
     }
 
     &__button { 
-        font-family: "Crimson Text";
+        font-family: $font-family-serif;
     }
 
     &__icon {
@@ -22,6 +22,6 @@
     }
 
     &__bracket {
-        color: #000;
+        color: $copy-color;
     }
 }

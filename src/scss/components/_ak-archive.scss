@@ -54,7 +54,7 @@ $archive-item-margin-half: $archive-item-margin / 2;
 
 	&__date {
 		font-style: italic;
-		font-family: "Crimson Text";
+		font-family: $font-family-serif;
 	}
 
 	&.ak-media-archive {

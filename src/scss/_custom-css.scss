@@ -5,24 +5,20 @@
 }
 
 #scroll-to-top {
-  color: #000000;
+  color: $copy-color;
 }
 
 #scroll-to-top:hover {
-  color: #000000;
+  color: $copy-color;
 }
 
 .scroll-to-top__copy {
   color: $accent-color;
 }
 
-/* .entry-title::before {
-  content: '— ';
-} */
-
 .page-number {
     font-size: 76px;
-    font-family: "Crimson Text";
+    font-family: $font-family-serif;
     color: $accent-color;
 
     br {

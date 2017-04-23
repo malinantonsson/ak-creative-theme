@@ -2,14 +2,14 @@ $team-img-ratio: 205%;
 .tmm {
 
 	.tmm_names {
-    	font-family: "Crimson Text";
+    	font-family: $font-family-serif;
     	font-weight: 700;
     	margin-bottom: 0;
     	margin-top: 0;
 	}
 
 	.tmm_job {
-    	font-family: "Crimson Text";
+    	font-family: $font-family-serif;
 		font-style: italic;
 		text-transform: none;
 		color: $copy-color;
