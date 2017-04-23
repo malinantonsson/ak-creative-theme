@@ -9,7 +9,7 @@
 
 function footerSection() {
 	const footer = document.getElementById('footer-widgets');
-	console.log(footer);
+
 	if (footer) {
 		var waypoint = new Waypoint({
 		  element: footer,
