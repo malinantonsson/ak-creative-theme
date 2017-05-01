@@ -22,34 +22,10 @@
 	//target twitter feed column
 	.panel-grid-cell-mobile-last {
 		position: relative;
-		padding-left: 45px!important;
-		padding-right: 45px!important;
 
 		//force max width on mobile
 		@media(max-width: $min-desktop) {
 			width: 100%!important;
-		}
-
-		&::before {
-			@include bracket-left();
-		}
-
-		&::after {
-			@include bracket-right();
-		}
-
-		@media (min-width: 413px) { //iphone 6
-			&::before,
-			&::after {
-				width: 18px
-			}
-		}
-
-		@media (min-width: 567px) { //iphone 5 landscape
-			&::before,
-			&::after {
-				width: 12px
-			}
 		}
 	}
 
@@ -60,7 +36,26 @@
 	}
 }
 
-/* .rotatingtweet {
-	display: flex;
-	flex-direction: column-reverse;
-} */
+.twitter-feed__widget {
+	.textwidget {
+		display: flex;
+
+		.ak-icon {
+			flex: 0 1 10%;
+		}
+
+		aside {
+			width: auto;
+		    overflow: hidden;
+		    flex: 1 1 80%;
+		}
+
+		.rotatingtweets {
+			max-width: 100%!important;
+		}
+
+		.rtw_meta {
+			font-weight: 600;
+		}
+	}
+}
