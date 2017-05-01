@@ -73,6 +73,11 @@
 				align-items: center;
     			font-size: 0.8em;
     			margin-bottom: 0;
+    			color: $copy-color;
+
+    			&:hover {
+    				color: $accent-color;
+    			}
 
 				img {
 					display: none;
