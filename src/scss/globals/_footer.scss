@@ -1,4 +1,7 @@
 .site-footer {
+    border-image: url('./png/site-gradient.png') 30 round;
+    border-top: 15px solid;
+    margin-top: 1em!important;
 
     //hide "a siteorigin theme"
     #theme-attribution {
